@@ -7,4 +7,7 @@
 # Pull base image.
 FROM ubuntu:14.04
 
+RUN apt-get update
+RUN apt-get -y install gettext wget curl
+
 COPY utils /utils
