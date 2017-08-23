@@ -1,11 +1,9 @@
 #!/bin/bash
 
-: ${NAGIOS_SERVER_IP=localhost}
-: ${NAGIOS_SERVER_PORT=9090}
+: ${NRPE_ALLOWED_HOST_IP=localhost}
+: ${NRPE_SERVER_PORT=5666}
 
-export NAGIOS_SERVER_IP
-export NAGIOS_SERVER_PORT
+export NRPE_ALLOWED_HOST_IP
+export NRPE_SERVER_PORT
 
 /utils/replace-vars /etc/nagios/nrpe.cfg
-
-
