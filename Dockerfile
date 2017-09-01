@@ -14,7 +14,7 @@ RUN apt-get install -y nagios-plugins nagios-nrpe-server
 COPY nrpe.cfg /etc/nagios/nrpe.cfg
 COPY utils /utils
 
-ADD cmd.sh cmd.sh
-RUN chmod +x cmd.sh
-RUN /cmd.sh
+ADD init_nagios.sh init_nagios.sh
+RUN chmod +x init_nagios.sh
+RUN /init_nagios.sh
 
